@@ -4,6 +4,8 @@ PODS:
   - Realm (10.28.4):
     - Realm/Headers (= 10.28.4)
   - Realm/Headers (10.28.4)
+  - RealmSwift (10.28.4):
+    - Realm (= 10.28.4)
   - SDWebImage (5.13.2):
     - SDWebImage/Core (= 5.13.2)
   - SDWebImage/Core (5.13.2)
@@ -12,6 +14,7 @@ DEPENDENCIES:
   - Alamofire
   - LoremIpsum
   - Realm
+  - RealmSwift
   - SDWebImage
 
 SPEC REPOS:
@@ -19,14 +22,16 @@ SPEC REPOS:
     - Alamofire
     - LoremIpsum
     - Realm
+    - RealmSwift
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   LoremIpsum: 25837e6f8f9c63471c23140be3e4c6e1b6743c9e
   Realm: 8ab5176275b4123e84383b33385d47f09507acac
+  RealmSwift: 0851105ca8c6d5722678c98e4d4e53637d1704c8
   SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
 
-PODFILE CHECKSUM: ef0ae5977cabdb73d7acd1f361eca05f2d3ebeee
+PODFILE CHECKSUM: f3c1a0aa4557410897626a385b05938b46ffcb36
 
 COCOAPODS: 1.11.3
