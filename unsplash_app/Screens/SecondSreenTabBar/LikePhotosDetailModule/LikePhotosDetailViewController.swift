@@ -22,7 +22,7 @@ class LikePhotosDetailViewController: UIViewController {
         }
     }
 
-    lazy private var imageView: UIImageView = {
+     private var imageView: UIImageView = {
         let photo = UIImageView()
         photo.translatesAutoresizingMaskIntoConstraints = false
         photo.backgroundColor = .white
@@ -30,7 +30,7 @@ class LikePhotosDetailViewController: UIViewController {
         return photo
     }()
 
-    lazy private var createdAtLabel: UILabel = {
+     private var createdAtLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont(name: "Apple SD Gothic Neo", size: 17)
@@ -39,7 +39,7 @@ class LikePhotosDetailViewController: UIViewController {
         return label
     }()
 
-    lazy private var usernameLabel: UILabel = {
+     private var usernameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont(name: "Apple SD Gothic Neo", size: 17)

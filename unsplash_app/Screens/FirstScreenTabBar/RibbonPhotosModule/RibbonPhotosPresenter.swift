@@ -5,7 +5,11 @@
 //  Created by Kirill Drozdov on 13.11.2022
 //
 
+import UIKit
+
 protocol RibbonPhotosPresenterProtocol: AnyObject {
+    func goDetailScreen(vc: UIViewController)
+    
 }
 
 class RibbonPhotosPresenter {
@@ -20,4 +24,7 @@ class RibbonPhotosPresenter {
 }
 
 extension RibbonPhotosPresenter: RibbonPhotosPresenterProtocol {
+    func goDetailScreen(vc: UIViewController) {
+        router.goToTheDetailedInformationScreen(destenation: vc)
+    }
 }

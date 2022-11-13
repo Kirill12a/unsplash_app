@@ -35,15 +35,22 @@ class RibbonPhotosViewController: UICollectionViewController { // UICollectionVi
     private func setupNavBar(){
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+}
 
-    private func congfigureCollectionView() {
-        self.collectionView!.register(PhotosCollectionViewCell.self, forCellWithReuseIdentifier: PhotosCollectionViewCell.reuseID)
-        collectionView.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
-        collectionView.contentInsetAdjustmentBehavior = .automatic
+//MARK: - SerachBar
+extension RibbonPhotosViewController: UISearchBarDelegate {
 
-        if let watefallLayut = collectionViewLayout as? WaterfallLayout {
-            watefallLayut.delegate = self
-        }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { _ in
+            self.nerworkDataManager.fetchImages(searchKeyWord: searchText) { [weak self] data in
+                guard let data = data else { return }
+                self?.photos = data.results
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
+            }
+        })
     }
 
     private func setUpSearchBar(){
@@ -56,7 +63,7 @@ class RibbonPhotosViewController: UICollectionViewController { // UICollectionVi
     }
 
     private func randomSearch(){
-        self.nerworkDataManager.fetchImages(searchKeyWord: Lorem.words(10)) { [weak self] data in
+        self.nerworkDataManager.fetchImages(searchKeyWord: Lorem.words(30)) { [weak self] data in
             guard let data = data else { return }
             self?.photos = data.results
             DispatchQueue.main.async {
@@ -64,8 +71,46 @@ class RibbonPhotosViewController: UICollectionViewController { // UICollectionVi
             }
         }
     }
+}
 
 
+//MARK: - WaterfallLayout
+extension RibbonPhotosViewController: WaterfallLayoutDelegate {
+    func waterfallLayout(_ layout: WaterfallLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let photo = photos[indexPath.item]
+        return CGSize(width: photo.width, height: photo.height)
+    }
+}
+
+
+
+// MARK: - Private functions
+private extension RibbonPhotosViewController {
+    func initialize() {
+    }
+}
+
+// MARK: - RibbonPhotosViewProtocol
+extension RibbonPhotosViewController: RibbonPhotosViewProtocol {
+}
+
+
+//MARK: - UiPreference
+extension RibbonPhotosViewController {
+    private func congfigureCollectionView() {
+        self.collectionView!.register(PhotosCollectionViewCell.self, forCellWithReuseIdentifier: PhotosCollectionViewCell.reuseID)
+        collectionView.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        collectionView.contentInsetAdjustmentBehavior = .automatic
+
+        if let watefallLayut = collectionViewLayout as? WaterfallLayout {
+            watefallLayut.delegate = self
+        }
+    }
+}
+
+
+//MARK: - Delegate methods
+extension RibbonPhotosViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -86,42 +131,7 @@ class RibbonPhotosViewController: UICollectionViewController { // UICollectionVi
         guard let imageData = cell.photo else { return }
         let detailVC = RibbonPhotosDetailModuleBuilder.build()
         detailVC.photo = imageData
-        navigationController?.pushViewController(detailVC, animated: true)
+        presenter?.goDetailScreen(vc: detailVC)
     }
-}
 
-extension RibbonPhotosViewController: UISearchBarDelegate {
-
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { _ in
-            self.nerworkDataManager.fetchImages(searchKeyWord: searchText) { [weak self] data in
-                guard let data = data else { return }
-                self?.photos = data.results
-                DispatchQueue.main.async {
-                    self?.collectionView.reloadData()
-                }
-            }
-        })
-    }
-}
-
-
-extension RibbonPhotosViewController: WaterfallLayoutDelegate {
-    func waterfallLayout(_ layout: WaterfallLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let photo = photos[indexPath.item]
-        return CGSize(width: photo.width, height: photo.height)
-    }
-}
-
-
-
-// MARK: - Private functions
-private extension RibbonPhotosViewController {
-    func initialize() {
-    }
-}
-
-// MARK: - RibbonPhotosViewProtocol
-extension RibbonPhotosViewController: RibbonPhotosViewProtocol {
 }

@@ -210,7 +210,6 @@
 		D2EF3470292102EA00ADF74E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D2EF3472292102FB00ADF74E /* Storage */,
 				D2EF3471292102F400ADF74E /* Networking */,
 			);
 			path = Services;
@@ -223,13 +222,6 @@
 				D2EF34752921043900ADF74E /* NetworkDataManager.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		D2EF3472292102FB00ADF74E /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storage;
 			sourceTree = "<group>";
 		};
 		D2EF347729213A2D00ADF74E /* Cell */ = {
@@ -283,8 +275,8 @@
 		D2EF34B82921864600ADF74E /* FirstScreenTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				D2EF34AD2921848000ADF74E /* RibbonPhotosDetailModule */,
 				D2484AE12920F92B009C6815 /* RibbonPhotosModule */,
+				D2EF34AD2921848000ADF74E /* RibbonPhotosDetailModule */,
 			);
 			path = FirstScreenTabBar;
 			sourceTree = "<group>";

@@ -7,7 +7,6 @@
 
 import Foundation
 
-//MARK: - Тестовый класс
 
 class NetworkDataManager {
 
@@ -28,7 +27,6 @@ class NetworkDataManager {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         guard let data = from else { return nil }
-
         do {
             let items = try decoder.decode(type.self, from: data)
             return items

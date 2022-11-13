@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 
 class NetworkRequestManager {
 
@@ -39,7 +38,7 @@ class NetworkRequestManager {
     private func generateParameters(searchKeyWord: String?) -> [String: String]{
         var parameters = [String : String]()
         parameters["query"] = searchKeyWord
-        parameters["page"] = String(1)
+        parameters["page"] = String(2)
         parameters["per_page"] = String(45)
         return parameters
     }
