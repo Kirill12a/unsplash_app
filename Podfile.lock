@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (5.6.2)
+  - LoremIpsum (2.0.0)
+  - Realm (10.28.4):
+    - Realm/Headers (= 10.28.4)
+  - Realm/Headers (10.28.4)
+  - SDWebImage (5.13.2):
+    - SDWebImage/Core (= 5.13.2)
+  - SDWebImage/Core (5.13.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - LoremIpsum
+  - Realm
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - LoremIpsum
+    - Realm
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  LoremIpsum: 25837e6f8f9c63471c23140be3e4c6e1b6743c9e
+  Realm: 8ab5176275b4123e84383b33385d47f09507acac
+  SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
+
+PODFILE CHECKSUM: ef0ae5977cabdb73d7acd1f361eca05f2d3ebeee
+
+COCOAPODS: 1.11.3
