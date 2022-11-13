@@ -85,7 +85,10 @@ class RibbonPhotosDetailViewController: UIViewController {
         favouritePhoto.createdAT = dateFormatter.string(from: photo.createdAt)
         favouritePhoto.photoUrl = photo.urls["regular"]!
         favouritePhoto.isFavourite = photo.isFavourite
-                navigationController?.popViewController(animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.navigationController?.popViewController(animated: true)
+
+        }
         if photo.isFavourite {
             saveObject(photo: favouritePhoto)
         } else {
