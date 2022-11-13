@@ -29,10 +29,17 @@
 		D2EF347929213A4100ADF74E /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF347829213A4100ADF74E /* PhotosCollectionViewCell.swift */; };
 		D2EF347B29213ADE00ADF74E /* WaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF347A29213ADE00ADF74E /* WaterFallLayout.swift */; };
 		D2EF347E29213B8200ADF74E /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = D2EF347D29213B8200ADF74E /* LoremSwiftum */; };
-		D2EF34822921619500ADF74E /* DetailViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34812921619500ADF74E /* DetailViewContoller.swift */; };
-		D2EF34852921624000ADF74E /* FavouritePhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34842921624000ADF74E /* FavouritePhotoDetailViewController.swift */; };
-		D2EF3488292162A200ADF74E /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF3487292162A200ADF74E /* SecondTableViewController.swift */; };
-		D2EF348B292162D400ADF74E /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF348A292162D400ADF74E /* PhotoTableViewCell.swift */; };
+		D2EF34982921822600ADF74E /* PhotoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34972921822600ADF74E /* PhotoTableCell.swift */; };
+		D2EF34A8292183A100ADF74E /* LikePhotosDetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34A3292183A100ADF74E /* LikePhotosDetailModuleBuilder.swift */; };
+		D2EF34A9292183A100ADF74E /* LikePhotosDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34A4292183A100ADF74E /* LikePhotosDetailPresenter.swift */; };
+		D2EF34AA292183A100ADF74E /* LikePhotosDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34A5292183A100ADF74E /* LikePhotosDetailRouter.swift */; };
+		D2EF34AB292183A100ADF74E /* LikePhotosDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34A6292183A100ADF74E /* LikePhotosDetailViewController.swift */; };
+		D2EF34AC292183A100ADF74E /* LikePhotosDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34A7292183A100ADF74E /* LikePhotosDetailInteractor.swift */; };
+		D2EF34B32921849900ADF74E /* RibbonPhotosDetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34AE2921849900ADF74E /* RibbonPhotosDetailModuleBuilder.swift */; };
+		D2EF34B42921849900ADF74E /* RibbonPhotosDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34AF2921849900ADF74E /* RibbonPhotosDetailPresenter.swift */; };
+		D2EF34B52921849900ADF74E /* RibbonPhotosDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34B02921849900ADF74E /* RibbonPhotosDetailRouter.swift */; };
+		D2EF34B62921849900ADF74E /* RibbonPhotosDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34B12921849900ADF74E /* RibbonPhotosDetailViewController.swift */; };
+		D2EF34B72921849900ADF74E /* RibbonPhotosDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF34B22921849900ADF74E /* RibbonPhotosDetailInteractor.swift */; };
 		EBBB38B16C3BE8C1B29E3ABD /* Pods_unsplash_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D493F1837DDC6A6CB77914 /* Pods_unsplash_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +70,17 @@
 		D2EF34752921043900ADF74E /* NetworkDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataManager.swift; sourceTree = "<group>"; };
 		D2EF347829213A4100ADF74E /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2EF347A29213ADE00ADF74E /* WaterFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallLayout.swift; sourceTree = "<group>"; };
-		D2EF34812921619500ADF74E /* DetailViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewContoller.swift; sourceTree = "<group>"; };
-		D2EF34842921624000ADF74E /* FavouritePhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePhotoDetailViewController.swift; sourceTree = "<group>"; };
-		D2EF3487292162A200ADF74E /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
-		D2EF348A292162D400ADF74E /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		D2EF34972921822600ADF74E /* PhotoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableCell.swift; sourceTree = "<group>"; };
+		D2EF34A3292183A100ADF74E /* LikePhotosDetailModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePhotosDetailModuleBuilder.swift; sourceTree = "<group>"; };
+		D2EF34A4292183A100ADF74E /* LikePhotosDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePhotosDetailPresenter.swift; sourceTree = "<group>"; };
+		D2EF34A5292183A100ADF74E /* LikePhotosDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePhotosDetailRouter.swift; sourceTree = "<group>"; };
+		D2EF34A6292183A100ADF74E /* LikePhotosDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePhotosDetailViewController.swift; sourceTree = "<group>"; };
+		D2EF34A7292183A100ADF74E /* LikePhotosDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePhotosDetailInteractor.swift; sourceTree = "<group>"; };
+		D2EF34AE2921849900ADF74E /* RibbonPhotosDetailModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibbonPhotosDetailModuleBuilder.swift; sourceTree = "<group>"; };
+		D2EF34AF2921849900ADF74E /* RibbonPhotosDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibbonPhotosDetailPresenter.swift; sourceTree = "<group>"; };
+		D2EF34B02921849900ADF74E /* RibbonPhotosDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibbonPhotosDetailRouter.swift; sourceTree = "<group>"; };
+		D2EF34B12921849900ADF74E /* RibbonPhotosDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibbonPhotosDetailViewController.swift; sourceTree = "<group>"; };
+		D2EF34B22921849900ADF74E /* RibbonPhotosDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibbonPhotosDetailInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +155,8 @@
 		D2484AE02920F8D0009C6815 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D2EF34862921629000ADF74E /* FavouritesPhotoModule */,
-				D2EF34832921622800ADF74E /* FavouritePhotoDetailModule */,
-				D2EF34802921617E00ADF74E /* DetailViewContoller */,
-				D2484AE12920F92B009C6815 /* RibbonPhotosModule */,
-				D2484AEC2920FB28009C6815 /* RibbonLikePhotosModule */,
+				D2EF34B82921864600ADF74E /* FirstScreenTabBar */,
+				D2EF34B92921866200ADF74E /* SecondSreenTabBar */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 				D2484AE42920F978009C6815 /* RibbonPhotosRouter.swift */,
 				D2484AE52920F978009C6815 /* RibbonPhotosViewController.swift */,
 				D2484AE62920F978009C6815 /* RibbonPhotosInteractor.swift */,
+				D2EF3499292182B400ADF74E /* Layout */,
 				D2EF347729213A2D00ADF74E /* Cell */,
 			);
 			path = RibbonPhotosModule;
@@ -171,6 +183,7 @@
 				D2484AEF2920FB5E009C6815 /* RibbonLikePhotosModuleRouter.swift */,
 				D2484AF02920FB5E009C6815 /* RibbonLikePhotosModuleViewController.swift */,
 				D2484AF12920FB5E009C6815 /* RibbonLikePhotosModuleInteractor.swift */,
+				D2EF34962921821700ADF74E /* Cell */,
 			);
 			path = RibbonLikePhotosModule;
 			sourceTree = "<group>";
@@ -223,42 +236,66 @@
 			isa = PBXGroup;
 			children = (
 				D2EF347829213A4100ADF74E /* PhotosCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D2EF34962921821700ADF74E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2EF34972921822600ADF74E /* PhotoTableCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D2EF3499292182B400ADF74E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
 				D2EF347A29213ADE00ADF74E /* WaterFallLayout.swift */,
 			);
-			path = Cell;
+			path = Layout;
 			sourceTree = "<group>";
 		};
-		D2EF34802921617E00ADF74E /* DetailViewContoller */ = {
+		D2EF349A292182D500ADF74E /* LikePhotosDetailModule */ = {
 			isa = PBXGroup;
 			children = (
-				D2EF34812921619500ADF74E /* DetailViewContoller.swift */,
+				D2EF34A3292183A100ADF74E /* LikePhotosDetailModuleBuilder.swift */,
+				D2EF34A4292183A100ADF74E /* LikePhotosDetailPresenter.swift */,
+				D2EF34A5292183A100ADF74E /* LikePhotosDetailRouter.swift */,
+				D2EF34A6292183A100ADF74E /* LikePhotosDetailViewController.swift */,
+				D2EF34A7292183A100ADF74E /* LikePhotosDetailInteractor.swift */,
 			);
-			path = DetailViewContoller;
+			path = LikePhotosDetailModule;
 			sourceTree = "<group>";
 		};
-		D2EF34832921622800ADF74E /* FavouritePhotoDetailModule */ = {
+		D2EF34AD2921848000ADF74E /* RibbonPhotosDetailModule */ = {
 			isa = PBXGroup;
 			children = (
-				D2EF34842921624000ADF74E /* FavouritePhotoDetailViewController.swift */,
+				D2EF34AE2921849900ADF74E /* RibbonPhotosDetailModuleBuilder.swift */,
+				D2EF34AF2921849900ADF74E /* RibbonPhotosDetailPresenter.swift */,
+				D2EF34B02921849900ADF74E /* RibbonPhotosDetailRouter.swift */,
+				D2EF34B12921849900ADF74E /* RibbonPhotosDetailViewController.swift */,
+				D2EF34B22921849900ADF74E /* RibbonPhotosDetailInteractor.swift */,
 			);
-			path = FavouritePhotoDetailModule;
+			path = RibbonPhotosDetailModule;
 			sourceTree = "<group>";
 		};
-		D2EF34862921629000ADF74E /* FavouritesPhotoModule */ = {
+		D2EF34B82921864600ADF74E /* FirstScreenTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				D2EF3487292162A200ADF74E /* SecondTableViewController.swift */,
-				D2EF3489292162C800ADF74E /* Cell */,
+				D2EF34AD2921848000ADF74E /* RibbonPhotosDetailModule */,
+				D2484AE12920F92B009C6815 /* RibbonPhotosModule */,
 			);
-			path = FavouritesPhotoModule;
+			path = FirstScreenTabBar;
 			sourceTree = "<group>";
 		};
-		D2EF3489292162C800ADF74E /* Cell */ = {
+		D2EF34B92921866200ADF74E /* SecondSreenTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				D2EF348A292162D400ADF74E /* PhotoTableViewCell.swift */,
+				D2EF349A292182D500ADF74E /* LikePhotosDetailModule */,
+				D2484AEC2920FB28009C6815 /* RibbonLikePhotosModule */,
 			);
-			path = Cell;
+			path = SecondSreenTabBar;
 			sourceTree = "<group>";
 		};
 		FF4458FA801933D0BAFACF93 /* Pods */ = {
@@ -390,27 +427,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2EF34852921624000ADF74E /* FavouritePhotoDetailViewController.swift in Sources */,
+				D2EF34AB292183A100ADF74E /* LikePhotosDetailViewController.swift in Sources */,
 				D2484AF9292100B0009C6815 /* PhotosModel.swift in Sources */,
-				D2EF348B292162D400ADF74E /* PhotoTableViewCell.swift in Sources */,
 				D2484AE72920F978009C6815 /* RibbonPhotosModuleBuilder.swift in Sources */,
 				D2484ADF2920F407009C6815 /* TabBarController.swift in Sources */,
 				D2484AF22920FB5E009C6815 /* RibbonLikePhotosModuleModuleBuilder.swift in Sources */,
+				D2EF34B72921849900ADF74E /* RibbonPhotosDetailInteractor.swift in Sources */,
+				D2EF34AA292183A100ADF74E /* LikePhotosDetailRouter.swift in Sources */,
+				D2EF34AC292183A100ADF74E /* LikePhotosDetailInteractor.swift in Sources */,
+				D2EF34A8292183A100ADF74E /* LikePhotosDetailModuleBuilder.swift in Sources */,
+				D2EF34B62921849900ADF74E /* RibbonPhotosDetailViewController.swift in Sources */,
 				D2EF34762921043900ADF74E /* NetworkDataManager.swift in Sources */,
 				D2EF34742921042900ADF74E /* NetworkRequestManager.swift in Sources */,
 				D2484AE82920F978009C6815 /* RibbonPhotosPresenter.swift in Sources */,
 				D2EF347B29213ADE00ADF74E /* WaterFallLayout.swift in Sources */,
-				D2EF3488292162A200ADF74E /* SecondTableViewController.swift in Sources */,
+				D2EF34982921822600ADF74E /* PhotoTableCell.swift in Sources */,
 				D2484AF62920FB5E009C6815 /* RibbonLikePhotosModuleInteractor.swift in Sources */,
+				D2EF34B52921849900ADF74E /* RibbonPhotosDetailRouter.swift in Sources */,
 				D2484AF52920FB5E009C6815 /* RibbonLikePhotosModuleViewController.swift in Sources */,
 				D2484AF42920FB5E009C6815 /* RibbonLikePhotosModuleRouter.swift in Sources */,
+				D2EF34B42921849900ADF74E /* RibbonPhotosDetailPresenter.swift in Sources */,
 				D2484AEB2920F978009C6815 /* RibbonPhotosInteractor.swift in Sources */,
-				D2EF34822921619500ADF74E /* DetailViewContoller.swift in Sources */,
+				D2EF34A9292183A100ADF74E /* LikePhotosDetailPresenter.swift in Sources */,
 				D2EF347929213A4100ADF74E /* PhotosCollectionViewCell.swift in Sources */,
 				D2484AE92920F978009C6815 /* RibbonPhotosRouter.swift in Sources */,
 				D21EA5D12920ED9400A928E6 /* AppDelegate.swift in Sources */,
 				D21EA5D32920ED9400A928E6 /* SceneDelegate.swift in Sources */,
 				D2484AF32920FB5E009C6815 /* RibbonLikePhotosModulePresenter.swift in Sources */,
+				D2EF34B32921849900ADF74E /* RibbonPhotosDetailModuleBuilder.swift in Sources */,
 				D2484AEA2920F978009C6815 /* RibbonPhotosViewController.swift in Sources */,
 				D2484AFB292100DB009C6815 /* Storage_FavouritePhoto.swift in Sources */,
 			);

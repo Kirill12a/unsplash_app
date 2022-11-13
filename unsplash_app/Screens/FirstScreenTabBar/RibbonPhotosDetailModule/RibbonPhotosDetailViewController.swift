@@ -1,15 +1,20 @@
 //
-//  DetailViewContoller.swift
-//  unsplash_app
+//  RibbonPhotosDetailViewController.swift
+//  Kirill Drozdov
 //
-//  Created by Kirill Drozdov on 13.11.2022.
+//  Created by Kirill Drozdov on 13.11.2022
 //
 
 import Foundation
 import UIKit
 import RealmSwift
 
-class DetailViewController: UIViewController {
+protocol RibbonPhotosDetailViewProtocol: AnyObject {
+}
+
+class RibbonPhotosDetailViewController: UIViewController {
+    // MARK: - Public
+    var presenter: RibbonPhotosDetailPresenterProtocol?
 
     let realm = try! Realm()
 
@@ -63,8 +68,10 @@ class DetailViewController: UIViewController {
         return button
     }()
 
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
         view.backgroundColor = .white
         setUPViewElements()
         updateButtonImage()
@@ -146,7 +153,18 @@ class DetailViewController: UIViewController {
     }
 }
 
-extension DetailViewController {
+// MARK: - Private functions
+private extension RibbonPhotosDetailViewController {
+    func initialize() {
+    }
+}
+
+// MARK: - RibbonPhotosDetailViewProtocol
+extension RibbonPhotosDetailViewController: RibbonPhotosDetailViewProtocol {
+}
+
+
+extension RibbonPhotosDetailViewController {
     func presentSuccessSaveAlert() {
         let allertController = UIAlertController(title: "Фотография сохранена", message: "Ваше фото успешно сохранено", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)

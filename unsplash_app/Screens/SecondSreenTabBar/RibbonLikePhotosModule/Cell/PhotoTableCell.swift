@@ -1,5 +1,5 @@
 //
-//  PhotoTableViewCell.swift
+//  PhotoTableCell.swift
 //  unsplash_app
 //
 //  Created by Kirill Drozdov on 13.11.2022.

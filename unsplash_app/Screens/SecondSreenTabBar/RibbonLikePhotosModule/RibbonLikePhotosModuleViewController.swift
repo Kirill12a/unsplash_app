@@ -1,28 +1,35 @@
 //
-//  SecondTableViewController.swift
-//  unsplash_app
+//  RibbonLikePhotosModuleViewController.swift
+//  Kirill Drozdov
 //
-//  Created by Kirill Drozdov on 13.11.2022.
+//  Created by Kirill Drozdov on 13.11.2022
 //
 
-import Foundation
 import UIKit
 import RealmSwift
 
-class SecondTableViewController: UITableViewController {
+protocol RibbonLikePhotosModuleViewProtocol: AnyObject {
+}
 
-    let realm = try! Realm()
-    var photos: Results<FavouritePhoto>!
+class RibbonLikePhotosModuleViewController: UITableViewController { // UITableViewController
+    // MARK: - Public
+    var presenter: RibbonLikePhotosModulePresenterProtocol?
 
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initialize()
         view.backgroundColor = .white
         loadPhotos()
         setUpTableView()
 
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
+        navigationController?.navigationBar.prefersLargeTitles = true    }
+
+
+    let realm = try! Realm()
+    var photos: Results<FavouritePhoto>!
+
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadPhotos()
@@ -66,7 +73,7 @@ class SecondTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! PhotoTableViewCell
         let photo = cell.photo
-        let favoriteVC = FavouritePhotoDetailViewController()
+        let favoriteVC = LikePhotosDetailModuleBuilder.build()
         favoriteVC.photo = photo
         navigationController?.pushViewController(favoriteVC, animated: true)
     }
@@ -88,4 +95,14 @@ class SecondTableViewController: UITableViewController {
         }
         tableView.reloadData()
     }
+}
+
+// MARK: - Private functions
+private extension RibbonLikePhotosModuleViewController {
+    func initialize() {
+    }
+}
+
+// MARK: - RibbonLikePhotosModuleViewProtocol
+extension RibbonLikePhotosModuleViewController: RibbonLikePhotosModuleViewProtocol {
 }

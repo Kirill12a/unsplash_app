@@ -1,16 +1,18 @@
 //
-//  FavouritePhotoViewController.swift
-//  unsplash_app
+//  LikePhotosDetailViewController.swift
+//  Kirill Drozdov
 //
-//  Created by Kirill Drozdov on 13.11.2022.
+//  Created by Kirill Drozdov on 13.11.2022
 //
 
-import Foundation
 import UIKit
-import RealmSwift
 
-class FavouritePhotoDetailViewController: UIViewController {
+protocol LikePhotosDetailViewProtocol: AnyObject {
+}
 
+class LikePhotosDetailViewController: UIViewController {
+    // MARK: - Public
+    var presenter: LikePhotosDetailPresenterProtocol?
     var photo: FavouritePhoto!{
         didSet {
             guard let photoURL = URL(string: photo.photoUrl) else {return}
@@ -46,13 +48,21 @@ class FavouritePhotoDetailViewController: UIViewController {
         return label
     }()
 
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
         view.backgroundColor = .white
         setUPViewElements()
     }
+}
 
-    func setUPViewElements(){
+// MARK: - Private functions
+private extension LikePhotosDetailViewController {
+    func initialize() {
+    }
+
+    private func setUPViewElements(){
         [imageView, usernameLabel, createdAtLabel].forEach(view.addSubview(_:))
 
         NSLayoutConstraint.activate([
@@ -76,4 +86,8 @@ class FavouritePhotoDetailViewController: UIViewController {
             createdAtLabel.heightAnchor.constraint(equalToConstant: 25),
         ])
     }
+}
+
+// MARK: - LikePhotosDetailViewProtocol
+extension LikePhotosDetailViewController: LikePhotosDetailViewProtocol {
 }

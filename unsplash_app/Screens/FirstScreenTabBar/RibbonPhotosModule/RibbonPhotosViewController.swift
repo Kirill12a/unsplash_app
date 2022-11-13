@@ -84,7 +84,7 @@ class RibbonPhotosViewController: UICollectionViewController { // UICollectionVi
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! PhotosCollectionViewCell
         guard let imageData = cell.photo else { return }
-        let detailVC = DetailViewController()
+        let detailVC = RibbonPhotosDetailModuleBuilder.build()
         detailVC.photo = imageData
         navigationController?.pushViewController(detailVC, animated: true)
     }
